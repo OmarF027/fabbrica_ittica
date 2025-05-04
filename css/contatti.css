@@ -1,16 +1,4 @@
 /* contatti.css */
-.contact-hero {
-    position: relative;
-    background: url('img/tonno1.jpg') no-repeat center center;
-    background-size: cover;
-    min-height: 100vh;
-    display: flex;
-    align-items: flex-start; /* Allineamento in alto */
-    justify-content: flex-start; /* Allineamento a sinistra */
-    padding: 120px 20px 20px 50px; /* Spazio per l'header e margine sinistro */
-    text-align: left; /* Testo allineato a sinistra */
-}
-
 .hero-overlay {
     background: rgba(0, 47, 75, 0.6);
     padding: 40px;

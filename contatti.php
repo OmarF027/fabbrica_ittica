@@ -10,6 +10,21 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .contact-hero {
+            position: relative;
+            background: url('img/tonno1.jpg') no-repeat center center;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 120px 20px 20px 50px;
+            text-align: left;
+        }
+    </style>
+
 </head>
 <body>
     
