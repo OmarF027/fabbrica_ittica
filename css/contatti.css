@@ -1,0 +1,78 @@
+/* contatti.css */
+.contact-hero {
+    position: relative;
+    background: url('img/tonno1.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start; /* Allineamento in alto */
+    justify-content: flex-start; /* Allineamento a sinistra */
+    padding: 120px 20px 20px 50px; /* Spazio per l'header e margine sinistro */
+    text-align: left; /* Testo allineato a sinistra */
+}
+
+.hero-overlay {
+    background: rgba(0, 47, 75, 0.6);
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 500px; /* Larghezza ridotta */
+    width: 100%;
+    margin: 0; /* Rimuove margini automatici */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Aggiunta ombra per profondità */
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.hero-form .form-group {
+    margin-bottom: 20px;
+}
+
+.hero-form input,
+.hero-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.1);
+    color: white;
+    font-size: 1rem;
+    box-sizing: border-box; /* Include padding nella larghezza */
+    transition: all 0.3s ease;
+}
+
+.hero-form input::placeholder,
+.hero-form textarea::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+.hero-form input:focus,
+.hero-form textarea:focus {
+    outline: none;
+    border-color: #007ea7;
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 0 8px rgba(0,126,167,0.4);
+}
+
+.hero-form .btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+    background: #007ea7;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.hero-form .btn:hover {
+    background: #005f85;
+}

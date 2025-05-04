@@ -1,0 +1,125 @@
+/* Footer Container */
+.footer__container {
+    background-color: #003366;
+    padding: 4rem 0 2rem 0;
+    color: #fff;
+}
+
+/* Social Media Section */
+.social__media {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    flex-wrap: wrap; /* Aggiungi wrap per il layout responsivo */
+}
+
+/* Colonne uguali con spaziatura controllata */
+.social__media > div {
+    flex: 1;
+    min-width: 280px;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+/* Prima colonna - allineamento sinistro */
+.social__media > div:first-child {
+    padding-left: 0;
+}
+
+/* Terza colonna - allineamento destro */
+.social__column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    padding-right: 0 !important;
+}
+
+/* Titoli colonne */
+.social__media h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Testo generale */
+.website__rights {
+    color: #fff;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+/* Social Icons Container */
+.social__icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* Icone social */
+.social__icon--link {
+    color: #fff;
+    font-size: 24px;
+    transition: transform 0.3s ease; /* Rimuovo il cambio di colore */
+}
+
+/* Hover effect sulle icone social */
+.social__icon--link:hover {
+    transform: scale(1.3); /* Ingrandisce le icone */
+}
+
+/* Hover effect sul testo dei link */
+.social__icon--link:hover, .social__column a:hover {
+    color: #fff; /* Manteniamo il bianco anche per i link */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .social__media {
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .social__media > div {
+        padding: 0 !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .social__column {
+        margin-right: 0;
+        align-items: center !important;
+    }
+
+    .social__icons {
+        justify-content: center;
+    }
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background-color: #003366; /* Stesso colore di sfondo del footer principale */
+    padding: 1rem 0;
+    color: #fff;
+    text-align: center;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}
+
+.footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #fff; 
+}
