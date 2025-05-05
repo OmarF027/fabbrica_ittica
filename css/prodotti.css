@@ -1,0 +1,182 @@
+/* RESET BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* HERO SECTION */
+.hero-pescato {
+    background: linear-gradient(rgba(4, 28, 64, 0.85), rgba(4, 28, 64, 0.85)), 
+                url('../img/tonno4.jpg');
+    background-size: cover;
+    background-position: center 75%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 60px;
+    transition: background-position 0.5s ease; /* Aggiunto effetto transizione */
+}
+
+.hero-pescato h1 {
+    font-size: 3.8rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    transition: transform 0.3s ease; /* Aggiunto effetto di movimento */
+}
+
+.hero-pescato:hover h1 {
+    transform: scale(1.05); /* Effetto di zoom quando l'utente passa sopra la sezione */
+}
+
+/* PRODUCT GRID */
+.product-section {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.product-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    gap: 40px;
+    background-color: #ffffff; /* Background bianco nei prodotti */
+    border-radius: 8px; /* Bordo arrotondato per un look più moderno */
+    transition: transform 0.3s ease;
+    padding: 20px; /* Aggiunto padding per un migliore spazio interno */
+}
+
+.product-row:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.product-row:hover {
+    transform: translateY(-10px); /* Leggera animazione di spostamento verso l'alto */
+}
+
+.image-container {
+    flex: 1;
+    min-height: 280px;  /* Imposta una altezza minima */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease; /* Aggiunto effetto transizione sul box-shadow */
+}
+
+.image-container:hover {
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3); /* Effetto hover sul box-shadow */
+}
+
+.text-container {
+    flex: 1;
+    padding: 30px;
+    transition: opacity 0.3s ease; /* Transizione per l'opacità */
+    color: #333; /* Colore del testo più scuro per una migliore leggibilità */
+}
+
+.text-container:hover {
+    opacity: 0.8; /* Effetto hover di trasparenza */
+}
+
+.product-title {
+    color: #1a3854;
+    font-size: 2.4rem;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    position: relative;
+    transition: color 0.3s ease; /* Transizione sul colore del titolo */
+}
+
+.product-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    height: 3px;
+    background: #d39e00;
+    transition: width 0.3s ease; /* Transizione sulla larghezza della barra sottostante */
+}
+
+.product-title:hover {
+    color: #d39e00; /* Cambio colore al passaggio del mouse */
+}
+
+.product-title:hover:after {
+    width: 100px; /* La barra aumenta di larghezza quando si passa sopra il titolo */
+}
+
+.product-description {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    transition: font-size 0.3s ease; /* Transizione sul font-size */
+}
+
+.product-description:hover {
+    font-size: 1.2rem; /* Effetto di ingrandimento del testo */
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero-pescato h1 {
+        font-size: 2.5rem;
+    }
+
+    .product-row {
+        flex-direction: column;
+        margin-bottom: 40px;
+        gap: 20px; /* Ridotto il gap tra immagine e testo */
+    }
+
+    .image-container {
+        width: 100%;
+        min-height: 250px; /* Altezza minima dell'immagine per dispositivi mobili */
+    }
+
+    .text-container {
+        padding: 20px 0;
+        text-align: center; /* Centrato il testo per dispositivi mobili */
+    }
+
+    .product-title {
+        font-size: 1.8rem;
+    }
+
+    .product-description {
+        font-size: 1rem; /* Font più piccolo sui dispositivi mobili */
+    }
+
+    .hero-pescato {
+        background-position: center 50%; /* Modificato per migliorare l'aspetto della foto */
+    }
+}
+
+/* ADDITIONAL STYLES FOR MOBILE */
+@media (max-width: 480px) {
+    .hero-pescato h1 {
+        font-size: 2rem; /* Ancora più piccolo per schermi molto piccoli */
+    }
+
+    .product-title {
+        font-size: 1.6rem;
+    }
+
+    .product-description {
+        font-size: 0.95rem; /* Ridotto il font per ottimizzare lo spazio */
+    }
+
+    .product-row {
+        gap: 10px; /* Minore spazio tra gli elementi su schermi piccoli */
+    }
+}
