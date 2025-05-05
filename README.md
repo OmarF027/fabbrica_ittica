@@ -1,0 +1,1 @@
+Sito vetrina realizzato per una fabbrica ittica, sviluppato utilizzando tecnologie moderne come HTML, CSS, PHP e JavaScript. Il sito è progettato per presentare in modo elegante e funzionale i prodotti ittici di alta qualità offerti dall'azienda, con un'interfaccia utente intuitiva e un design responsivo per una navigazione ottimale su qualsiasi dispositivo.
