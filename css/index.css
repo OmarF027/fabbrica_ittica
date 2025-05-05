@@ -3,7 +3,7 @@ body {
     margin: 0; 
     font-family: 'Open Sans', sans-serif;
     color: #333;
-    background-color: #002f4b; /* Fallback blu scuro per evitare flash bianco */
+    background-color: #002f4b;
     transition: background-color 0.4s ease-in;
 }
 
@@ -14,7 +14,7 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: #002f4b; /* Stessa tonalità blu per uniformità */
+    background-color: #002f4b;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,8 +22,8 @@ body {
 }
 
 #preloader .spinner {
-    border: 8px solid #f3f3f3; /* Colore chiaro */
-    border-top: 8px solid #007ea7; /* Colore pulsante per stile */
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #007ea7;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -52,13 +52,13 @@ body {
     height: 60px;
     width: auto;
     transition: transform 0.3s ease;
-    background-color: white; 
-    padding: 5px;             
-    border-radius: 8px;       
+    background-color: white;
+    padding: 5px;
+    border-radius: 8px;
 }
 
 .logo:hover {
-    transform: scale(1.15); 
+    transform: scale(1.15);
 }
 
 .menu-toggle {
@@ -129,7 +129,7 @@ body {
     color: #e63946;
 }
 
-/* Overlay molto leggero solo per aumentare il contrasto del testo */
+/* --- Hero Section --- */
 .hero::before {
     content: "";
     position: absolute;
@@ -137,7 +137,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 47, 75, 0.25); /* solo 25% di scurimento */
+    background: rgba(0, 47, 75, 0.25);
     z-index: 1;
 }
 
@@ -148,6 +148,10 @@ body {
     padding: 0 5%;
     max-width: 800px;
     text-align: left;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeSlideUp 1s ease-out forwards;
+    animation-delay: 0.4s;
 }
 
 .hero-text h1 {
@@ -155,7 +159,7 @@ body {
     margin: 0 0 20px 0;
     line-height: 1.2;
     font-family: 'Playfair Display', serif;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2); /* più leggero */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .hero-text p {
@@ -164,6 +168,7 @@ body {
     margin-bottom: 30px;
 }
 
+/* --- Bottoni --- */
 .btn {
     display: inline-block;
     background: #007ea7;
@@ -179,16 +184,7 @@ body {
     background: #005f7a;
 }
 
-/* --- Animazioni del Body e Hero --- */
-
-/* --- HERO TEXT: apparizione fluida e professionale --- */
-.hero-text {
-    opacity: 0;
-    transform: translateY(40px);
-    animation: fadeSlideUp 1s ease-out forwards;
-    animation-delay: 0.4s;
-}
-
+/* --- Animazioni --- */
 @keyframes fadeSlideUp {
     to {
         opacity: 1;
@@ -196,16 +192,108 @@ body {
     }
 }
 
-/* --- Transizioni e Hover --- */
+/* --- Transizioni --- */
 a, .btn, .menu-toggle, .logo {
     transition: all 0.3s ease;
 }
 
-/* --- Animazioni Menu Toggle --- */
-.menu-toggle {
-    transition: transform 0.3s ease;
+/* ================= MEDIA QUERIES ================= */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2.8rem;
+        line-height: 1.1;
+    }
+
+    .hero-text p {
+        font-size: 1.1rem;
+    }
+
+    .logo {
+        height: 50px;
+        padding: 4px;
+    }
+
+    .menu-toggle {
+        padding: 8px;
+    }
+
+    .menu-toggle span {
+        width: 22px;
+        height: 2px;
+    }
+
+    .menu-links a {
+        font-size: 1.3rem;
+        margin: 12px 0;
+    }
 }
 
-.menu-toggle:hover {
-    transform: scale(1.05);
+@media (max-width: 480px) {
+    .header-elements {
+        padding: 0 10px;
+        top: 15px;
+    }
+
+    .hero-text {
+        text-align: center;
+        padding: 0 8%;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+
+    .menu-toggle {
+        padding: 6px;
+    }
+
+    .menu-toggle span {
+        width: 20px;
+        margin: 4px 0;
+    }
+
+    .menu-links a {
+        font-size: 1.1rem;
+        margin: 10px 0;
+    }
+
+    .hero-text {
+        transform: translateY(20px);
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero-text h1 {
+        font-size: 4rem;
+    }
+
+    .hero-text p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .menu-links a {
+        margin: 8px 0;
+        font-size: 1rem;
+    }
+
+    .logo {
+        height: 35px;
+    }
 }
